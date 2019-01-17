@@ -1,41 +1,28 @@
 package ethazi3;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import ethazi3.MainWindow;
-
-import javax.swing.JButton;
-import javax.swing.JTextField;
 import javax.swing.JLabel;
-import javax.swing.AbstractAction;
-import java.awt.event.ActionEvent;
+import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.awt.event.ActionEvent;
 
-import javax.swing.Action;
+public class Bienvenida extends JPanel {
 
-public class Bienvenida extends JFrame {
-
-	private JPanel contentPane;
-
-	
 	/**
-	 * Create the frame.
+	 * Create the panel.
 	 */
 	public Bienvenida() {
 		setLayout(null);
 		
-	
-		
-		JLabel lblBienvenidoALa = new JLabel("BIENVENIDO A LA MAQUINA DE BILLETES DE TERMIBUS");
-		lblBienvenidoALa.setBounds(80, 43, 279, 14);
-		contentPane.add(lblBienvenidoALa);
+		JLabel lblBienvenida = new JLabel("BIENVENIDA");
+		lblBienvenida.setBounds(173, 53, 101, 14);
+		add(lblBienvenida);
+		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
 		
 		JButton btnComprar = new JButton("COMPRAR");
+		
 		btnComprar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//click boton de bienvenida
@@ -46,9 +33,10 @@ public class Bienvenida extends JFrame {
 				
 			}
 		});
-		btnComprar.setBounds(162, 112, 89, 23);
-		contentPane.add(btnComprar);
+		btnComprar.setBounds(160, 159, 89, 23);
+		add(btnComprar);
 		
-		
+
 	}
 }
+

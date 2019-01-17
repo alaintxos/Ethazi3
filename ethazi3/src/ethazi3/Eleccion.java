@@ -4,13 +4,13 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Choice;
 import java.awt.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.Color;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JRadioButton;
-import com.toedter.calendar.JCalendar;
-import com.toedter.calendar.JDayChooser;
-import com.toedter.calendar.JDateChooser;
+
 
 public class Eleccion extends JPanel {
 
@@ -20,11 +20,9 @@ public class Eleccion extends JPanel {
 	public Eleccion() {
 		setLayout(null);
 		
-		JButton btnLineas = new JButton("LINEAS");
-		btnLineas.setBounds(27, 39, 89, 23);
-		add(btnLineas);
 		
 		JComboBox comboBox = new JComboBox();
+		
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Origen"}));
 		comboBox.setToolTipText("");
 		comboBox.setBounds(46, 87, 70, 20);
@@ -44,13 +42,23 @@ public class Eleccion extends JPanel {
 		rdbtnIdaYVuelta.setBounds(46, 249, 109, 23);
 		add(rdbtnIdaYVuelta);
 		
-		JCalendar calendar = new JCalendar();
-		calendar.setBounds(240, 11, 184, 153);
-		add(calendar);
+		JButton btnLineas_1 = new JButton("Lineas");
+		btnLineas_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//click boton de bienvenida
+				//Ocultar bienvenida
+				//Mostrar productos
+				MainWindow.ocultarEleccion();
+				MainWindow.mostarLineas();
+				
+			}
+		});
+		btnLineas_1.setBounds(78, 34, 89, 23);
+		add(btnLineas_1);
 		
-		JDateChooser dateChooser = new JDateChooser();
-		dateChooser.setBounds(279, 226, 95, 20);
-		add(dateChooser);
-
-	}
+		
+		
+				
+			
+		}
 }

@@ -33,10 +33,6 @@ public class MainWindow {
 			}
 		});
 	}
-
-	/**
-	 * 
-	 */
 	
 	public static void mostarBienvenida() {
 		panelBienvenida.setVisible(true);

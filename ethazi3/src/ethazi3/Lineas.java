@@ -1,11 +1,15 @@
 package ethazi3;
 
 import javax.swing.JPanel;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 public class Lineas extends JPanel {
-	private JTextField txtLineas;
 
 	/**
 	 * Create the panel.
@@ -13,24 +17,67 @@ public class Lineas extends JPanel {
 	public Lineas() {
 		setLayout(null);
 		
-		JButton btnLineaBilbaomungia = new JButton("Linea Bilbao-Mungia");
-		btnLineaBilbaomungia.setBounds(28, 90, 135, 23);
-		add(btnLineaBilbaomungia);
 		
-		JButton btnLineaBilbaogernika = new JButton("Linea Bilbao-Gernika");
-		btnLineaBilbaogernika.setBounds(28, 135, 135, 23);
-		add(btnLineaBilbaogernika);
 		
-		JButton btnLineaBibaogetxo = new JButton("Linea Bilbao-Donosti");
-		btnLineaBibaogetxo.setBounds(28, 186, 135, 23);
-		add(btnLineaBibaogetxo);
+		JButton btnLineaBilbaoMuskiz = new JButton("Linea Bilbao-Muskiz");
+		btnLineaBilbaoMuskiz.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//click boton de bienvenida
+				//Ocultar bienvenida
+				//Mostrar productos
+				MainWindow.ocultarLineas();
+				MainWindow.mostrarEleccion();
+				
+			}
+		});
+		btnLineaBilbaoMuskiz.setBounds(28, 135, 158, 23);
+		add(btnLineaBilbaoMuskiz);
 		
-		txtLineas = new JTextField();
-		txtLineas.setText("                                                       LINEAS");
-		txtLineas.setBounds(54, 29, 351, 20);
-		add(txtLineas);
-		txtLineas.setColumns(10);
+		JButton btnLineaBibaoBalmaseda = new JButton("Linea Bilbao-Balmaseda");
+		btnLineaBibaoBalmaseda.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//click boton de bienvenida
+				//Ocultar bienvenida
+				//Mostrar productos
+				MainWindow.ocultarLineas();
+				MainWindow.mostrarEleccion();
+				
+			}
+		});
+		btnLineaBibaoBalmaseda.setBounds(28, 186, 158, 23);
+		add(btnLineaBibaoBalmaseda);
+		
+		JButton btnLineaBilbaoplentzia = new JButton("Linea Bilbao-Plentzia");
+		btnLineaBilbaoplentzia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//click boton de bienvenida
+				//Ocultar bienvenida
+				//Mostrar productos
+				MainWindow.ocultarLineas();
+				MainWindow.mostrarEleccion();
+				
+			}
+		});
+		btnLineaBilbaoplentzia.setBounds(28, 85, 158, 23);
+		add(btnLineaBilbaoplentzia);
+		
+		JButton btnLineaBilbaodurango = new JButton("Linea Bilbao-Durango");
+		btnLineaBilbaodurango.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//click boton de bienvenida
+				//Ocultar bienvenida
+				//Mostrar productos
+				MainWindow.ocultarLineas();
+				MainWindow.mostrarEleccion();
+				
+			}
+		});
+		btnLineaBilbaodurango.setBounds(28, 232, 158, 23);
+		add(btnLineaBilbaodurango);
+		
+		JLabel lblLineas = new JLabel("LINEAS");
+		lblLineas.setBounds(210, 29, 46, 14);
+		add(lblLineas);
 
 	}
-
 }
